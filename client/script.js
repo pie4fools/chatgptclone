@@ -36,6 +36,10 @@ function typeText(element, text) {
 // generate unique ID for each message div of bot
 // necessary for typing text effect for that specific reply
 // without unique ID, typing text will work on every element
+
+//chat GPT explaining this code: This code is importing two SVG images from the assets folder, one for a bot and one for a user, and then creating a function to create messages in a chat container element on the page with the imported images as icons for each user/bot that sends a message in the chat container element on the page. 
+//The loader function creates an interval that adds dots to the loading indicator until it reaches three dots and then resets it back to zero dots again, while the typeText function creates an interval that adds characters from a given string one by one until it reaches the end of the string and then clears the interval so that no more characters are added to the string after it has reached its end length.
+//Finally, createMessage takes in two parameters: a string representing a message and a boolean value representing whether or not it is from a bot or user, and then creates an HTML element with either class 'bot' or 'user' depending on which boolean value was passed in as well as appending either bot or user SVG image to this HTML element before appending this HTML element to the chat container element on the page and scrolling down to bottom of this container element so that new messages can be seen without having to manually scroll down each time there is a new incoming message in this chat container element on the page
 function generateUniqueId() {
     const timestamp = Date.now();
     const randomNumber = Math.random();
